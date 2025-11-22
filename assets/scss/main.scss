@@ -30,7 +30,7 @@ nav.navbar{
         justify-content: center;
         padding: .5rem;
         img{
-            width: 5rem;
+            width: 4.3rem;
         }
         h2{
             font-size: $base-font-size * 1.5;
@@ -40,7 +40,7 @@ nav.navbar{
             letter-spacing: .03cm;
             margin: 0;
             line-height: $base-font-size * 2;
-
+            text-transform: uppercase;
         }
     }
     .nav-content{
@@ -197,7 +197,7 @@ nav.navbar{
             width:100%;
             padding-right: .5rem;
             justify-content: flex-end;
-            .donate-btn,.stories-btn{
+            .get-a-loan-btn,.stories-btn{
                 display: none !important;
             }
         }
@@ -291,7 +291,7 @@ nav.navbar{
         width:70%;
         bottom: 0;
         left: -70%;
-        background-color: $bg-color;
+        background-color: $bg-color1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -326,7 +326,7 @@ nav.navbar{
             }
         }
         .nav_list{
-            
+            margin-top: auto;
             width: 100%;
             height: 45%;
             align-items: center;
@@ -355,7 +355,7 @@ nav.navbar{
                 width: 100%;
                 a{
                     text-decoration: none;
-                    color: $black;
+                    color: $primary-color;
                     transition: all .4s ease;
                     font-size: $base-font-size * 1.2;
                     display: flex;
@@ -401,7 +401,7 @@ nav.navbar{
                 align-items: center;
                 transition: all .4s ease;
                 font-weight: 400;
-                i.bx{
+                i{
                     font-size: $base-font-size * 1.3;
                     color: white;
                     background: $primary-color;
@@ -409,7 +409,7 @@ nav.navbar{
                     padding: 0.5rem;
                 }
                 img{
-                    width: 1.6rem;
+                    width: 2.3rem;
                 }
                 &:hover{
                     transform: translateY(-15%);
@@ -422,8 +422,11 @@ nav.navbar{
             }
             div{
                 display: flex;
+                align-items: center;
+                
                 gap: 1rem;
                 padding: .5rem 0;
+                flex-wrap: wrap;
             }
 
         }
@@ -480,21 +483,15 @@ nav.navbar{
         padding: $base-font-size * 1.5;
         justify-content: flex-start;
         align-items: center;
-           
-        
-        
-        img{
+    
+        .landing-image{
             width: 50%;
             height: 100%;
             object-fit: contain;
-            background-position: center;
-            
+            background-position: center;        
             z-index: -1;
             box-sizing: border-box;
-           
             top: 0;
-            
-            
         }
        
         .text-content{
@@ -537,23 +534,25 @@ nav.navbar{
                 gap: $base-font-size * 1.5;
                
                 width: 100%;
-                a.donate-btn{
+                a.get-a-loan-btn{
                 @include button-style($white, white);
-                min-width: 8rem;
+                min-width: 10rem;
+                width: fit-content;
                 background: $secondary-color;
                 display: flex;
                 align-self: center;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: flex-start;
                 gap: .5rem;
                 transition: .4s ease;;
                 border-radius: 5px;
                 position: relative;
                 border: 1px solid $secondary-color;
                 line-height: 45px;
+                color: $white;
                 span{
-                    
-                    width: 100%;
+                   
+                    width: 80%;
                     display: flex;
                     padding-left: 5px;
                     justify-self: flex-start;
@@ -568,12 +567,13 @@ nav.navbar{
                 }
                 i.bx{
                     display: flex;
-                    width: 50%;
+                    width: 20%;
                     align-items: flex-end;
                     justify-content: flex-end; 
                     position: absolute;
                     font-size: 30px;
-                    
+                    margin-right: auto;
+                    right: 0
                 }
                 
                 
@@ -601,6 +601,8 @@ nav.navbar{
         @media (max-width: $breakpoint-mobile) {
             gap: 2rem;
             flex-direction: column;
+            width: 100%;
+            
             .text-content{
                 bottom: 10%;
                 width: 100%;                
@@ -623,7 +625,7 @@ nav.navbar{
                    
                 }
             }
-            img{
+            .landing-image{
                 width: 100%;
                 
             }

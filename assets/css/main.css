@@ -48,7 +48,7 @@ nav.navbar .nav-logo {
   padding: 0.5rem;
 }
 nav.navbar .nav-logo img {
-  width: 5rem;
+  width: 4.3rem;
 }
 nav.navbar .nav-logo h2 {
   font-size: 21px;
@@ -58,6 +58,7 @@ nav.navbar .nav-logo h2 {
   letter-spacing: 0.03cm;
   margin: 0;
   line-height: 28px;
+  text-transform: uppercase;
 }
 nav.navbar .nav-content {
   width: 75%;
@@ -226,7 +227,7 @@ nav.navbar .nav-content .extra .nav-trigger {
     padding-right: 0.5rem;
     justify-content: flex-end;
   }
-  nav.navbar .nav-content .extra .donate-btn, nav.navbar .nav-content .extra .stories-btn {
+  nav.navbar .nav-content .extra .get-a-loan-btn, nav.navbar .nav-content .extra .stories-btn {
     display: none !important;
   }
   nav.navbar .nav-trigger {
@@ -302,7 +303,7 @@ nav.navbar .nav-content .extra .nav-trigger {
   width: 70%;
   bottom: 0;
   left: -70%;
-  background-color: rgba(241, 188, 239, 0.3490196078);
+  background-color: #f1bcef;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -335,6 +336,7 @@ nav.navbar .nav-content .extra .nav-trigger {
   line-height: 28px;
 }
 .sidebar .nav_list {
+  margin-top: auto;
   width: 100%;
   height: 45%;
   align-items: center;
@@ -380,7 +382,7 @@ nav.navbar .nav-content .extra .nav-trigger {
 }
 .sidebar .nav_list li a {
   text-decoration: none;
-  color: #000000;
+  color: #AA06A3;
   transition: all 0.4s ease;
   font-size: 16.8px;
   display: flex;
@@ -423,7 +425,7 @@ nav.navbar .nav-content .extra .nav-trigger {
   transition: all 0.4s ease;
   font-weight: 400;
 }
-.sidebar .socials a i.bx {
+.sidebar .socials a i {
   font-size: 18.2px;
   color: white;
   background: #AA06A3;
@@ -431,7 +433,7 @@ nav.navbar .nav-content .extra .nav-trigger {
   padding: 0.5rem;
 }
 .sidebar .socials a img {
-  width: 1.6rem;
+  width: 2.3rem;
 }
 .sidebar .socials a:hover {
   transform: translateY(-15%);
@@ -442,8 +444,10 @@ nav.navbar .nav-content .extra .nav-trigger {
 }
 .sidebar .socials div {
   display: flex;
+  align-items: center;
   gap: 1rem;
   padding: 0.5rem 0;
+  flex-wrap: wrap;
 }
 
 .main {
@@ -490,7 +494,7 @@ nav.navbar .nav-content .extra .nav-trigger {
   justify-content: flex-start;
   align-items: center;
 }
-.main .landingpage img {
+.main .landingpage .landing-image {
   width: 50%;
   height: 100%;
   -o-object-fit: contain;
@@ -532,7 +536,7 @@ nav.navbar .nav-content .extra .nav-trigger {
   gap: 21px;
   width: 100%;
 }
-.main .landingpage .text-content .action-btns a.donate-btn {
+.main .landingpage .text-content .action-btns a.get-a-loan-btn {
   padding: 0 8px;
   color: #000000;
   background-color: #fff;
@@ -544,45 +548,50 @@ nav.navbar .nav-content .extra .nav-trigger {
   text-wrap: nowrap;
   border-radius: 3px;
   font-size: 14px;
-  min-width: 8rem;
+  min-width: 10rem;
+  width: -moz-fit-content;
+  width: fit-content;
   background: #1BB40E;
   display: flex;
   align-self: center;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 0.5rem;
   transition: 0.4s ease;
   border-radius: 5px;
   position: relative;
   border: 1px solid #1BB40E;
   line-height: 45px;
+  color: #fff;
 }
 @media (min-width: 1200px) {
-  .main .landingpage .text-content .action-btns a.donate-btn {
+  .main .landingpage .text-content .action-btns a.get-a-loan-btn {
     font-size: 13.16px;
   }
 }
-.main .landingpage .text-content .action-btns a.donate-btn span {
-  width: 100%;
+.main .landingpage .text-content .action-btns a.get-a-loan-btn span {
+  width: 80%;
   display: flex;
   padding-left: 5px;
   justify-self: flex-start;
   align-self: start;
   align-items: flex-start;
 }
-.main .landingpage .text-content .action-btns a.donate-btn:hover {
+.main .landingpage .text-content .action-btns a.get-a-loan-btn:hover {
   transition: 0.4s ease;
   background: #AA06A3;
   color: #fff;
   border: 1px solid #AA06A3;
 }
-.main .landingpage .text-content .action-btns a.donate-btn i.bx {
+.main .landingpage .text-content .action-btns a.get-a-loan-btn i.bx {
   display: flex;
-  width: 50%;
+  width: 20%;
   align-items: flex-end;
   justify-content: flex-end;
   position: absolute;
   font-size: 30px;
+  margin-right: auto;
+  right: 0;
 }
 .main .landingpage .text-content .action-btns a.contact-btn {
   padding: 0 8px;
@@ -619,6 +628,7 @@ nav.navbar .nav-content .extra .nav-trigger {
   .main .landingpage {
     gap: 2rem;
     flex-direction: column;
+    width: 100%;
   }
   .main .landingpage .text-content {
     bottom: 10%;
@@ -637,7 +647,7 @@ nav.navbar .nav-content .extra .nav-trigger {
     justify-content: flex-start;
     width: 100%;
   }
-  .main .landingpage img {
+  .main .landingpage .landing-image {
     width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
