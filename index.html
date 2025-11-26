@@ -76,10 +76,10 @@
 
     </div>
     <div class="sidebar">
-        <!-- <div class="nav-logo">
+        <div class="nav-logo">
             <img src="assets/images/logo.png" alt="">
             <h2>Jashfin<br> Enterprise</h2>
-        </div> -->
+        </div>
         <ul class="nav_list">       
             <li><a href="#home-section">Home</a></li>
             <li><a href="#about-section">About Us</a></li>
@@ -113,7 +113,7 @@
                 <h1>
                     <span>Everyone deserves access to financial opportunities don't you think?</span>
                 </h1>
-                <p>As a pioneering financial inclusion startup, we're revolutionizing the way underserved communities in Ghana access loans and financial services.</p>
+                <p>As a pioneering financial inclusion startup, we're revolutionizing the way underserved demographics in Ghana access loans and financial services. Our mission is to bridge the financial gap, empowering tertiary students, young entrepreneurs, low-income individuals, and small business owners to achieve their goals and aspirations.</p>
 
                <div class="action-btns">
                     <a href="#" class="get-a-loan-btn"><span>Apply for a Loan</span> <i class="bx bxs-arrow-up-right-stroke bx-tada-hover"></i></a>
@@ -121,6 +121,89 @@
                </div>
             </div>
             <img class="landing-image" src="assets/images/langing-img.png" alt="">
+            
+        </div>
+        <!-- Accreditations -->
+        <div class="accreditations">
+            <div class="accreditation">
+                <img src="assets/images/attorney general.png" alt="">
+                <!-- <span>Registered with the Registrar General's Department</span> -->
+            </div>
+            <div class="accreditation">
+                <img src="assets/images/nca.png" alt="">
+                <!-- <span>Registered with the National Communications Authority</span> -->
+            </div>
+            <div class="accreditation">
+                <img src="assets/images/dpc.png" alt="">
+                <!-- <span>Registered with the Data Protection Commission</span> -->
+            </div>
+        </div>
+        <!-- Featured Services -->
+        <div class="featured-services">
+            <small>Quick Access to our Services</small>
+            <h2>How we can <span>help.</span></h2>
+            <p>At JASHFIN Enterprise, we offer a range of innovative loan products designed to support the financial needs of underserved communities in Ghana. Our loan products include:</p>
+            <div class="services-container">
+                <div class="service-card">
+                    <img src="assets/images/educredit.png" alt="">
+                    <h3>Educredit</h3>
+                    <p>Loan for students awaiting upkeep money or stipends.</p>
+                    <a href="#" class="cta-service">Explore Our Support</a>
+                </div>
+                <div class="service-card">
+                    <img src="assets/images/youthcredit.png" alt="">
+                    <h3>Youthcredit</h3>
+                    <p>Liquidity loan for innovative students and young entrepreneurs.</p>
+                    <a href="#" class="cta-service">Explore Our Support</a>
+                </div>
+                <div class="service-card">
+                    <img src="assets/images/quickcredit.png" alt="">
+                    <h3>Quickcredit</h3>
+                    <p>Emergency loan for low-income individuals facing salary delays.</p>
+                    <a href="#" class="cta-service">Explore Our Support</a>
+                </div>
+                <div class="service-card">
+                    <img src="assets/images/ecocredit.png" alt="">
+                    <h3>Ecocredit</h3>
+                    <p>Affordable liquidity loan for eco-friendly and sustainable businesses.</p>
+                    <a href="#" class="cta-service">Explore Our Support</a>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <small>Contact Us</small>
+            <div class="flexed-section">
+                <div class="left-section">
+                    <h3>Start the Journey</h3>
+                    <span>Have more specific questions? Enter your details below and our customer care will contact you with information regarding your request.</span>
+                </div>
+                <form action="">
+                    <div class="first-section">
+                        <label for="name">Your name:</label>
+                        <input type="text" name="name" id="name" placeholder="John Doe">
+                        
+                        <label for="email">Your email:</label>
+                        <input type="email" name="email" id="email" placeholder="example@mail.com">
+
+                        <div class="check-div">
+                            <input type="checkbox" name="data-storage" id="data-storage">
+                            <label for="data-storage">Yes, I give permission to store and process my data under our<a href="#">data storage policy</a></label>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="second-section">
+                        <label for="message">Your message:</label>
+                        <textarea rows="3" id="message" placeholder="Your message here..."></textarea>
+
+                        <p>We'd love to hear from you. Please call our customer service on <a href="tel: +233200910884">029 227 2242</a></p>
+                    </div>
+
+                    <button type="submit" class="btn">Submit <i class="bx bx-send"></i></button>
+                </form>
+            </div>
             
         </div>
 
@@ -228,6 +311,53 @@
           contactUs.classList.toggle("open");
         });
     </script>
+
+    <script>
+        // Function to change image source on small screens
+        function changeImageSrc() {
+            // Get the screen width
+            var screenWidth = window.innerWidth;
+
+            // Select all images within the .accreditations
+            var accreditationImages = document.querySelectorAll('.accreditations .accreditation img');
+
+            // Loop through all the images and change the src based on screen width
+            accreditationImages.forEach(function(image, index) {
+                if (screenWidth <= 768) {
+                    // Change the image source for small screens
+                    switch(index) {
+                        case 0:
+                            image.src = 'assets/images/attorney-sm.png'; // Example small screen image
+                            break;
+                        case 1:
+                            image.src = 'assets/images/nca-sm.png'; // Example small screen image
+                            break;
+                        case 2:
+                            image.src = 'assets/images/dpc-sm.png'; // Example small screen image
+                            break;
+                    }
+                } else {
+                    // Revert to the original image source for larger screens
+                    switch(index) {
+                        case 0:
+                            image.src = 'assets/images/attorney general.png'; 
+                            break;
+                        case 1:
+                            image.src = 'assets/images/nca.png'; 
+                            break;
+                        case 2:
+                            image.src = 'assets/images/dpc.png'; 
+                            break;
+                    }
+                }
+            });
+        }
+
+        // Call the function on page load and on window resize
+        window.addEventListener('load', changeImageSrc);
+        window.addEventListener('resize', changeImageSrc);
+    </script>
+
       
 </body>
 </html>

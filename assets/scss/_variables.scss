@@ -3,7 +3,9 @@
 $primary-color: #AA06A3;
 // $secondary-color: #CCDC70;
 $secondary-color: #1BB40E;
-$tertiary-color: #404752;
+// $tertiary-color: #f2f2f5;
+$tertiary-color: #92d48c11;
+
 
 $font-color: #AA06A3;
 $font-color-accent: #44464F;
@@ -15,7 +17,10 @@ $black: #000000;
 $white: #ffffff;
 
 // Fonts
-$base-font-size: 14px;
+$base-font-size-sm: 13px;
+$base-font-size-md: 14px;
+$base-font-size-lg: 15px; // Larger font for desktop
+$base-font-size-xl: 16px; // Even larger font for large desktop
 $font-family: 'Poppins', sans-serif;
 
 // Spacing
@@ -25,3 +30,4 @@ $margin-base: 20px;
 // Breakpoints
 $breakpoint-mobile: 768px;
 $breakpoint-desktop: 1200px;
+$breakpoint-max: 1600px;
