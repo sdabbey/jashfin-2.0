@@ -11,7 +11,7 @@ nav.navbar{
     width: 100%;
     display: flex;
     height: 110px;
-    // position: absolute;
+    position: absolute;
     top: 0;
     box-sizing: border-box;
     background: transparent !important;
@@ -481,7 +481,8 @@ nav.navbar{
 
     
     .landingpage{
-        
+        margin-top: 110px;;
+
         width: 100%;
         min-height: 60vh;
         height: fit-content;
@@ -1287,6 +1288,115 @@ nav.navbar{
                         display: none;
                     }
                 }
+            }
+        }
+    }
+
+    .about-landing{
+        background: url("/assets/images/about-bg.png");
+        background-size: cover;
+        width: 100%;
+        height: 90vh;
+       
+        box-sizing: border-box;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow:hidden;
+        display: flex;
+        flex-direction: row;
+        padding: $base-font-size-md * 2 $base-font-size-md * 1.5;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 110px;
+        .text-content{
+            
+            width: 100%;
+            height: 100%;
+            
+            padding: $base-font-size-md * 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.5rem;
+            
+            h1{
+                color: $white;
+                font-size: $base-font-size-md * 3;
+                line-height: normal;
+                font-weight:500;
+                word-spacing: .1cm;
+                color: $black;
+                text-align: center;
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                width: 70%;
+
+            }
+            p{
+                color: $font-color-accent;
+                font-size: $base-font-size-md * 1;
+                font-weight: 300;
+                width: 70%;
+                text-align: center;
+                margin-bottom: 1rem;
+                b{
+                    font-weight: 600;
+                }
+            }
+           
+            
+        }
+        @media (max-width: $breakpoint-mobile) {
+            gap: 2rem;
+            flex-direction: column;
+            width: 100%;
+            
+            .text-content{
+                bottom: 10%;
+                width: 100%;                
+                padding: 0rem;
+                
+                gap: 1.5rem;
+                
+                h1{
+                    width: 100%;
+                    font-size: $base-font-size-sm * 2.5;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    
+                }
+                
+                
+            }
+            
+        }
+
+        @media (min-width: $breakpoint-desktop) and (max-width: $breakpoint-max) {
+            .text-content{
+                h1{
+                    font-size: $base-font-size-lg * 3;
+                }
+                p{
+                    
+                    font-size: $base-font-size-lg * 1.1;
+                    margin-bottom: 0;
+                }
+                
+            }
+        }
+        @media (min-width: $breakpoint-max) {
+            .text-content{
+                padding: $base-font-size-xl * 1.5;
+                h1{
+                    font-size: $base-font-size-xl * 4;
+                }
+                p{
+                    font-size: $base-font-size-xl * 1.1;
+            
+                }
+                
             }
         }
     }
