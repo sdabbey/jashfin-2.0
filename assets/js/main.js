@@ -61,6 +61,7 @@ faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
     question.addEventListener('click', () => {
         question.querySelector('.bx').classList.toggle('active');
+        question.classList.toggle('active');
         item.querySelector('.faq-answer').classList.toggle('active');
     });
 });

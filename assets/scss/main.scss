@@ -932,7 +932,7 @@ nav.navbar{
                 width: 55%;
                 display: flex;
                 flex-direction: column;
-                gap: $base-font-size-md * 1.5;
+                gap: $base-font-size-md * 1;
                 
                 .faq-item{
                     width: 100%;
@@ -944,15 +944,20 @@ nav.navbar{
                     .faq-question{
                         font-size: $base-font-size-md * 1.2;
                         padding: 0 1rem;
+                        line-height: 45px;
                         background: $bg-accent;
                         cursor: pointer;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+                        &.active h4{
+                            color: $secondary-color;
+                        }
                         h4{
                             color: $black;
                             font-weight: 300;
                             padding: 1rem 0;
+
                         }
                         i.bx{
                             font-size: $base-font-size-md * 1.5;

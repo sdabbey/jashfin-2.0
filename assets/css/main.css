@@ -1040,7 +1040,7 @@ nav.navbar .nav-content .extra .nav-trigger {
   width: 55%;
   display: flex;
   flex-direction: column;
-  gap: 21px;
+  gap: 14px;
 }
 .main .faq-section .flexed-section .faqs .faq-item {
   width: 100%;
@@ -1054,11 +1054,15 @@ nav.navbar .nav-content .extra .nav-trigger {
 .main .faq-section .flexed-section .faqs .faq-item .faq-question {
   font-size: 16.8px;
   padding: 0 1rem;
+  line-height: 45px;
   background: rgba(146, 212, 140, 0.2117647059);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.main .faq-section .flexed-section .faqs .faq-item .faq-question.active h4 {
+  color: #1BB40E;
 }
 .main .faq-section .flexed-section .faqs .faq-item .faq-question h4 {
   color: #000000;
