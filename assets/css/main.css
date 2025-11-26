@@ -998,6 +998,91 @@ nav.navbar .nav-content .extra .nav-trigger {
     font-size: 17.6px;
   }
 }
+.main .faq-section {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 70px 42px;
+  background: rgba(146, 212, 140, 0.0666666667);
+  gap: 28px;
+}
+.main .faq-section small {
+  font-size: 15.4px;
+  color: #1BB40E;
+  font-weight: 400;
+  border-left: 2px solid #1BB40E;
+  padding: 0.1rem 0.5rem;
+  border-right: 2px solid #1BB40E;
+}
+.main .faq-section .flexed-section {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+.main .faq-section .flexed-section .left-section {
+  width: 45%;
+}
+.main .faq-section .flexed-section .left-section h3 {
+  font-size: 42px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+.main .faq-section .flexed-section .left-section h3 span {
+  color: #44464F;
+}
+.main .faq-section .flexed-section .faqs {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.main .faq-section .flexed-section .faqs .faq-item {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  overflow: hidden;
+}
+.main .faq-section .flexed-section .faqs .faq-item .faq-question {
+  font-size: 16.8px;
+  padding: 0 1rem;
+  background: rgba(146, 212, 140, 0.2117647059);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .faq-section .flexed-section .faqs .faq-item .faq-question h4 {
+  color: #000000;
+  font-weight: 300;
+  padding: 1rem 0;
+}
+.main .faq-section .flexed-section .faqs .faq-item .faq-question i.bx {
+  font-size: 21px;
+  transition: 0.4s ease;
+  color: #1BB40E;
+}
+.main .faq-section .flexed-section .faqs .faq-item .faq-question i.bx.active {
+  transform: rotateZ(45deg);
+}
+.main .faq-section .flexed-section .faqs .faq-item .faq-answer {
+  font-size: 14px;
+  font-weight: 300;
+  color: #44464F;
+  height: 0;
+}
+.main .faq-section .flexed-section .faqs .faq-item .faq-answer.active {
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .main .contact-section {
   width: 100%;
   box-sizing: border-box;
@@ -1211,5 +1296,83 @@ nav.navbar .nav-content .extra .nav-trigger {
   .main .contact-section form button.btn {
     width: -moz-fit-content;
     width: fit-content;
+  }
+}
+.main footer.footer {
+  width: 100%;
+  background-color: #AA06A3;
+  padding: 2% 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.main footer.footer hr {
+  border: none;
+  background: rgba(255, 255, 255, 0.137);
+  height: 1px;
+  margin: 2% 0;
+}
+.main footer.footer .footer-content {
+  display: flex;
+  align-items: center;
+}
+.main footer.footer .footer-content .left-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main footer.footer .footer-content .left-section img {
+  width: 4rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 100px 100px;
+  border: 2px solid #1BB40E;
+}
+.main footer.footer .footer-content .left-section h3 {
+  font-size: 18.2px;
+  font-weight: 500;
+  color: white;
+  margin: 1rem 0;
+}
+.main footer.footer .footer-content .left-section .divided-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.main footer.footer .footer-content .left-section .divided-section p {
+  color: white;
+}
+.main footer.footer .footer-content .left-section .divided-section p a {
+  color: white;
+  text-decoration: none;
+}
+.main footer.footer .footer-content .left-section .divided-section p a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.main footer.footer .footer-content .left-section .divided-section div {
+  display: flex;
+  gap: 1rem;
+}
+.main footer.footer .footer-content .left-section .divided-section div a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.main footer.footer .footer-content .left-section .divided-section div a:hover {
+  color: #1BB40E;
+}
+.main footer.footer .footer-content .left-section .divided-section div a i.bxl {
+  font-size: 21px;
+}
+@media (max-width: 768px) {
+  .main footer.footer .footer-content .left-section .divided-section {
+    flex-direction: column;
+  }
+  .main footer.footer .footer-content .left-section .divided-section div {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */
