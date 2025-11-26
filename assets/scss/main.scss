@@ -909,6 +909,13 @@ nav.navbar{
             padding: .1rem .5rem;
             border-right: 2px solid $secondary-color;
         }
+        @media (max-width: $breakpoint-mobile) {
+            padding: $base-font-size-sm * 3 $base-font-size-sm * 1.5;
+            gap: $base-font-size-sm * 1.5;
+            small{
+                font-size: $base-font-size-sm * 1;
+            }
+        }
         .flexed-section{
             width: 100%;
             display: flex;
@@ -977,6 +984,29 @@ nav.navbar{
                         &.active{
                             
                             height: fit-content;
+                        }
+                    }
+                }
+            }
+            @media (max-width: $breakpoint-mobile) {
+                flex-direction: column;
+                gap: $base-font-size-sm * 2;
+                .left-section, .faqs{
+                    width: 100%;
+                }
+                .left-section{
+                    h3{
+                        font-size: $base-font-size-sm * 2.5;
+                    }
+                }
+                .faqs{
+                    .faq-item{
+                        .faq-question{
+                            height: 65px;
+                            line-height: normal;
+                            h4{
+                                font-size: $base-font-size-sm * 1.1;
+                            }
                         }
                     }
                 }
@@ -1145,21 +1175,34 @@ nav.navbar{
 
         @media (max-width: $breakpoint-mobile){
             height: fit-content;
-            h3{
-                font-size: $base-font-size-md * 2.5;
-            }
-            form{
+            .flexed-section{
                 flex-direction: column;
-                align-items: flex-start;
-                flex-wrap: nowrap;
-                
-                .left-section, .right-section{
+                gap: $base-font-size-sm * 2;
+                .left-section, form{
                     width: 100%;
                 }
-                button.btn{
-                    width: fit-content;
+                .left-section{
+                    h3{
+                        font-size: $base-font-size-sm * 2.5;
+                    }
+                    span{
+                        font-size: $base-font-size-sm * 1;
+                    }
+                }
+                form{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    flex-wrap: nowrap;
+                    .first-section, .second-section{
+                        width: 100%;
+                    }
+                    
+                    button.btn{
+                        width: fit-content;
+                    }
                 }
             }
+            
         }
 
     }

@@ -1017,6 +1017,15 @@ nav.navbar .nav-content .extra .nav-trigger {
   padding: 0.1rem 0.5rem;
   border-right: 2px solid #1BB40E;
 }
+@media (max-width: 768px) {
+  .main .faq-section {
+    padding: 39px 19.5px;
+    gap: 19.5px;
+  }
+  .main .faq-section small {
+    font-size: 13px;
+  }
+}
 .main .faq-section .flexed-section {
   width: 100%;
   display: flex;
@@ -1086,6 +1095,25 @@ nav.navbar .nav-content .extra .nav-trigger {
 .main .faq-section .flexed-section .faqs .faq-item .faq-answer.active {
   height: -moz-fit-content;
   height: fit-content;
+}
+@media (max-width: 768px) {
+  .main .faq-section .flexed-section {
+    flex-direction: column;
+    gap: 26px;
+  }
+  .main .faq-section .flexed-section .left-section, .main .faq-section .flexed-section .faqs {
+    width: 100%;
+  }
+  .main .faq-section .flexed-section .left-section h3 {
+    font-size: 32.5px;
+  }
+  .main .faq-section .flexed-section .faqs .faq-item .faq-question {
+    height: 65px;
+    line-height: normal;
+  }
+  .main .faq-section .flexed-section .faqs .faq-item .faq-question h4 {
+    font-size: 14.3px;
+  }
 }
 .main .contact-section {
   width: 100%;
@@ -1286,18 +1314,28 @@ nav.navbar .nav-content .extra .nav-trigger {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .main .contact-section h3 {
-    font-size: 35px;
+  .main .contact-section .flexed-section {
+    flex-direction: column;
+    gap: 26px;
   }
-  .main .contact-section form {
+  .main .contact-section .flexed-section .left-section, .main .contact-section .flexed-section form {
+    width: 100%;
+  }
+  .main .contact-section .flexed-section .left-section h3 {
+    font-size: 32.5px;
+  }
+  .main .contact-section .flexed-section .left-section span {
+    font-size: 13px;
+  }
+  .main .contact-section .flexed-section form {
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: nowrap;
   }
-  .main .contact-section form .left-section, .main .contact-section form .right-section {
+  .main .contact-section .flexed-section form .first-section, .main .contact-section .flexed-section form .second-section {
     width: 100%;
   }
-  .main .contact-section form button.btn {
+  .main .contact-section .flexed-section form button.btn {
     width: -moz-fit-content;
     width: fit-content;
   }
