@@ -1139,7 +1139,7 @@ nav.navbar .nav-content .extra .nav-trigger {
     flex-direction: column;
     gap: 26px;
   }
-  .main .faq-section .flexed-section .left-section, .main .faq-section .flexed-section .faqs {
+  .main .faq-section .flexed-section .left-section, .main .faq-section .flexed-section .right-section {
     width: 100%;
   }
   .main .faq-section .flexed-section .left-section h3 {
@@ -1518,10 +1518,15 @@ nav.navbar .nav-content .extra .nav-trigger {
   }
   .main .about-landing .text-content h1 {
     width: 100%;
-    font-size: 32.5px;
+    font-size: 26px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .main .about-landing .text-content p {
+    font-size: 16.9px;
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
@@ -1577,7 +1582,10 @@ nav.navbar .nav-content .extra .nav-trigger {
 }
 @media (max-width: 768px) {
   .main .story-section p {
-    font-size: 19.6px;
+    font-size: 16.9px;
+  }
+  .main .story-section span {
+    font-size: 16.9px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
@@ -1640,8 +1648,14 @@ nav.navbar .nav-content .extra .nav-trigger {
   color: #1BB40E;
 }
 @media (max-width: 768px) {
+  .main .missvis-section .mission-section, .main .missvis-section .vision-section {
+    padding: 0.5rem;
+  }
   .main .missvis-section .mission-section p, .main .missvis-section .vision-section p {
-    font-size: 19.6px;
+    font-size: 16.9px !important;
+  }
+  .main .missvis-section .mission-section span, .main .missvis-section .vision-section span {
+    font-size: 16.9px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
@@ -1698,9 +1712,14 @@ nav.navbar .nav-content .extra .nav-trigger {
 @media (max-width: 768px) {
   .main .missvis-section .mission-section, .main .missvis-section .vision-section, .main .missvis-section .values-section {
     width: 100%;
+    padding: 5%;
   }
   .main .missvis-section .mission-section p, .main .missvis-section .vision-section p, .main .missvis-section .values-section p {
-    font-size: 19.6px;
+    width: 90%;
+    font-size: 16.9px;
+  }
+  .main .missvis-section .mission-section span, .main .missvis-section .vision-section span, .main .missvis-section .values-section span {
+    font-size: 16.9px;
   }
 }
 .main .team-section {
@@ -1791,6 +1810,18 @@ nav.navbar .nav-content .extra .nav-trigger {
 .main .team-section .card-container .card .content p {
   font-size: 11.9px;
   color: #000000;
+}
+@media (max-width: 768px) {
+  .main .team-section .card-container .card {
+    width: 100%;
+    height: 500px;
+  }
+  .main .team-section .card-container .card .content h3 {
+    font-size: 19.5px;
+  }
+  .main .team-section .card-container .card .content span {
+    font-size: 13px;
+  }
 }
 .main .services-section {
   width: 100%;
