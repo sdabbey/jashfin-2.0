@@ -481,7 +481,7 @@ nav.navbar{
 
     
     .landingpage{
-        margin-top: 110px;;
+        margin-top: 110px;
 
         width: 100%;
         min-height: 60vh;
@@ -936,55 +936,94 @@ nav.navbar{
                 }
                 
             }
-            .faqs{
+            .right-section{
                 width: 55%;
-                display: flex;
-                flex-direction: column;
-                gap: $base-font-size-md * 1;
-                
-                .faq-item{
-                    width: 100%;
-                    height: fit-content;
+                .faq-type{
                     display: flex;
                     flex-direction: column;
-                    gap: $base-font-size-md * 1.5;
-                    overflow: hidden;
-                    .faq-question{
-                        font-size: $base-font-size-md * 1.2;
-                        padding: 0 1rem;
-                        line-height: 45px;
-                        background: $bg-accent;
-                        cursor: pointer;
+                    
+                    .faq-type-name{
+                        font-size: $base-font-size-md * 1.3;
+                        color: $font-color-accent;
+                        font-weight: 500;
+                        margin: 0;
+                        padding: .5rem 0;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                        &.active h4{
-                            color: $secondary-color;
-                        }
-                        h4{
-                            color: $black;
-                            font-weight: 300;
-                            padding: 1rem 0;
-
+                        cursor: pointer;
+                        
+                        &.active{
+                            border-bottom: 2px solid $primary-color;
+                            color: $primary-color;
+                            i.bx{
+                                color: $primary-color;
+                            }
                         }
                         i.bx{
                             font-size: $base-font-size-md * 1.5;
+
+                            color: $black;
                             transition: .4s ease;
-                            color: $secondary-color;
-                            &.active{
-                                transform: rotateZ(45deg);
-                            }
+                            
                         }
                     }
-                    .faq-answer{
-                        font-size: $base-font-size-md * 1;
-                        font-weight: 300;
-                        color: $font-color-accent;
+                    .faqs{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: $base-font-size-md * 1;
+                        padding: .5rem 1rem;
                         height: 0;
-                        
+                       
                         &.active{
-                            
                             height: fit-content;
+                        }
+                        .faq-item{
+                            width: 100%;
+                            height: fit-content;
+                            display: flex;
+                            flex-direction: column;
+                            gap: $base-font-size-md * 1.5;
+                            overflow: hidden;
+                            .faq-question{
+                                font-size: $base-font-size-md * 1.2;
+                                padding: 0 1rem;
+                                line-height: 45px;
+                                background: $bg-accent;
+                                cursor: pointer;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                &.active h4{
+                                    color: $secondary-color;
+                                }
+                                h4{
+                                    color: $black;
+                                    font-weight: 300;
+                                    padding: 1rem 0;
+
+                                }
+                                i.bx{
+                                    font-size: $base-font-size-md * 1.5;
+                                    transition: .4s ease;
+                                    color: $secondary-color;
+                                    &.active{
+                                        transform: rotateZ(45deg);
+                                    }
+                                }
+                            }
+                            .faq-answer{
+                                font-size: $base-font-size-md * 1;
+                                font-weight: 300;
+                                color: $font-color-accent;
+                                height: 0;
+                                
+                                &.active{
+                                    
+                                    height: fit-content;
+                                }
+                            }
                         }
                     }
                 }
@@ -1667,6 +1706,175 @@ nav.navbar{
                     p{
                         font-size: $base-font-size-md * 0.85;
                         color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    // Services Page Styles
+    .services-section{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $base-font-size-md * 5 $base-font-size-md * 1.5;
+        gap: 1rem;
+        margin-top: 110px;
+        
+        
+        
+        h2{
+            font-size: $base-font-size-md * 3.5;
+            font-weight: 400;
+            color: $black;
+            text-align: center;
+            margin: 0;
+            span{
+                color: $primary-color;
+            }
+            
+        }
+        p{
+            font-size: $base-font-size-md * 1.2;
+            color: $font-color-accent;
+            font-weight: 300;
+            text-align: center;
+            max-width: 800px;
+        }
+        @media (max-width: $breakpoint-mobile) {
+                small{
+                    font-size: $base-font-size-sm * 1;
+                }
+                h2{
+                    font-size: $base-font-size-sm * 2.5;
+                }
+                p{
+                    font-size: $base-font-size-sm * 1;
+                }
+        }
+
+        @media (min-width: $breakpoint-desktop) and (max-width: $breakpoint-max) {
+            small{
+                font-size: $base-font-size-lg * 1;
+            }
+            h2{
+                font-size: $base-font-size-lg * 3;
+            }
+            p{
+                font-size: $base-font-size-lg * 1.1;
+            }
+        }
+
+        @media (min-width: $breakpoint-max) {
+            small{
+                font-size: $base-font-size-xl * 1;
+            }
+            h2{
+                font-size: $base-font-size-xl * 4;
+            }
+            p{
+                font-size: $base-font-size-xl * 1.1;
+            }
+        }
+        .services-container{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: $base-font-size-md * 2;
+            margin-top: $base-font-size-md * 3;
+            flex-wrap: wrap;
+            padding: $base-font-size-md * 1.5;
+            .service-card{
+                width: 46%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $base-font-size-md * 1.5;
+                padding: $base-font-size-md * 2 $base-font-size-md * 1;
+                box-sizing: border-box;
+                border: 1px solid rgba(0, 0, 0, 0.084);
+                border-radius: 12px;
+                transition: .4s all ease;
+                &:hover{
+                    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-5%);
+                }
+                img{
+                    width: 2.5rem;
+                    background: $primary-color;
+                    object-fit: contain;
+                    border-radius: 50px;
+                    padding: .3rem;
+                }
+                h3{
+                    font-size: $base-font-size-md * 1.5;
+                    color: $black;
+                    font-weight: 500;
+                    text-align: left;
+                    margin: 0;
+                }
+                p{
+                    font-size: $base-font-size-md * 1;
+                    color: $font-color-accent;
+                    font-weight: 300;
+                    text-align: left;
+                    margin: 0;
+                }
+                .cta-service{
+                    font-size: $base-font-size-md * 1;
+                    color: $primary-color;
+                    font-weight: 500;
+                    text-align: left;
+                    text-decoration: none;
+                    transition: .3s ease;
+                    width: fit-content;
+                    position: relative;
+                    padding: .3rem 0;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        
+                        left: 0;
+                        bottom: 0;
+                        width: 0;
+                        height: 2px; /* border height */
+                        background-color: $primary-color; /* border color */
+                        transition: width 0.4s ease;
+                    }
+                    &:hover{
+                        transition: .4s ease;
+
+                        &::after {
+                            width: 100%; /* full width on hover */
+                        }
+                    }
+                }
+
+                @media (max-width: $breakpoint-mobile) {
+                    width: 100%;
+                    gap: $base-font-size-sm * 1;
+                    p{
+                        font-size: $base-font-size-sm * 1;
+                    }
+                }
+
+                @media (min-width: $breakpoint-desktop) and (max-width: $breakpoint-max) {
+                    
+                    gap: $base-font-size-lg * 1;
+                    p{
+                        font-size: $base-font-size-lg * 1.1;
+                    }
+                }
+                @media (min-width: $breakpoint-max) {
+                    width: 23%;
+                    gap: $base-font-size-xl * 1.5;
+                    p{
+                        font-size: $base-font-size-xl * 1.1;
                     }
                 }
             }

@@ -55,6 +55,21 @@ function smoothScrollTo(targetElement, duration = 800) {
 
 
 // FAQ Accordion
+const faqTypes = document.querySelectorAll('.faq-type');
+faqTypes.forEach(type => {
+    const typeName = type.querySelector('.faq-type-name');
+    typeName.addEventListener('click', () => {
+        typeName.querySelector('.bx').classList.remove('bx-plus');
+        typeName.querySelector('.bx').classList.add('bx-minus');
+         if (typeName.classList.contains('active')) {
+            typeName.querySelector('.bx').classList.remove('bx-minus');
+            typeName.querySelector('.bx').classList.add('bx-plus');
+         }
+        typeName.classList.toggle('active');
+        type.querySelector('.faqs').classList.toggle('active');
+    });
+});
+
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
